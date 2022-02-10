@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel app</title>
+</head>
+
+<body>
+  <div id="container">
+    <h1 class="page_title">Your next getaway!</h1>
+    
+    <section id="form" class="foreground">
+      <h3 class="form_title">
+        Enter your destination and your start &amp; end dates.
+      </h3>
+      <div>
+        <label for="dest">Destination:</label>
+        <input id="dest" type="text" value="" placeholder="city">
+      </div>
+      <div id="dates">
+        <div>
+          <label for="d_start">Start date:</label>
+          <input id="d_start" type="text" placeholder="month/day/year">
+        </div>
+        <div>
+          <label for="d_end">End date:</label>
+          <input id="d_end" type="text" placeholder="month/day/year">
+        </div>
+      </div>
+      <button id="submit_btn">Submit</button>
+    </section>
+
+    <section id="form_results" class="foreground remove-display">
+      <div id="user_results"></div>
+      <img id="c_image"/>
+      <div id="c_weather">
+        <div>
+          <div id="w_c"></div>
+          <div id="w_d"></div>
+        </div>
+        <div id="w_t"></div>
+        <div>
+          <img id="w_i"/>
+          <div id="w_d"></div>
+        </div>
+      </div>
+      <button id="clear_form">Clear</button>
+    </section>
+  </div>
+
+  <footer>
+    <p>
+      Udacity's Front End Developer "Nano-Degree" Capstone Project
+    </p>
+  </footer>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js');
+        })
+    }
+  </script>
+</body>
+</html>

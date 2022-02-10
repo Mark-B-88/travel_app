@@ -1,0 +1,66 @@
+#form {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+
+  div {
+    margin-top: 1rem;
+    width: 100%;
+    height: auto;
+  }
+
+  #dates {
+    margin: auto;
+  }
+}
+
+.form_title {
+  color: #000;
+}
+
+input {
+  margin: 0.5rem auto 0 auto;
+  background-color: #fff;
+  color: #000;
+  border-radius: 9px;
+  width: 100%;
+  padding: 0.5rem;
+
+  font-size: 1rem;
+  text-align: center;
+  color:#000;
+
+  &::placeholder {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    color: #000;
+  }
+}
+
+label {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  #dates {
+    display: flex;
+    column-gap: 30px;
+  }
+
+  #form {
+    p {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media (min-width:992px) {
+  #dates {
+    column-gap: 20px;
+  }
+}
